@@ -1,0 +1,76 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 64px);
+    text-align: center;
+}
+
+.projects h2 {
+    padding-top: 70px;
+}
+
+.projectsCtnr {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 64px);
+    padding: 20px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 450px;
+    height: 300px;
+    margin: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectDataCtnr {
+    background: #585191;
+    color: #fff;
+    border-radius: 3px;
+    width: 96%;
+    height: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectData {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.badge {
+    text-transform: uppercase;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+.badge.sideProject {
+    color: #fff;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    background: #81E979;
+}
+
+.badge.courseProject {
+    color: #fff;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    background: #C6CA53;
+}
