@@ -33,6 +33,18 @@
     padding-top: 30px;
 
 }
+.appCtnr
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    padding-top: 30px;
+
+}
+.restCtnr{
+    display: flex;
+}
 .skillsDescription{
     width: 500px;
 }

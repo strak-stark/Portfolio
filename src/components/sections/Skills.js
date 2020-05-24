@@ -7,7 +7,8 @@ import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
 import Grow from '@material-ui/core/Grow';
 import { TradContext } from '../../contexts/TradContext';
-import { skillsData, techData } from '../../data/SkillsData'
+import { skillsData, techData, appData } from '../../data/SkillsData'
+import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -54,6 +55,8 @@ const Skills = () => {
         reactIcon: false,
         webglIcon: false,
         firebaseIcon: false,
+        gitIcon: false,
+        vsCodeIcon: false,
     })
     const handleChange = (e) => {
         // Get second class of icon
@@ -63,6 +66,11 @@ const Skills = () => {
             cssIcon: false,
             jsIcon: false,
             pythonIcon: false,
+            reactIcon: false,
+            webglIcon: false,
+            firebaseIcon: false,
+            gitIcon: false,
+            vsCodeIcon: false,
             [target]: !state[target]
         })
     }
@@ -73,29 +81,28 @@ const Skills = () => {
                 ? <>
                     <h2>Hi, I'm Aurélien. Welcome to my portfolio !</h2>
                     <Typography paragraph className="skillsDescription">
-                        I love programming since 2012, I first started by doing small CLI projects that was useful only for me (usually made with Batch or Visual Basic),
-                        then begun using python, to do more helpful applications. I've recently begun to learn web development, I just love it.
-        </Typography>
+
+                        <Box fontFamily="Lato" m={1}>
+                            I love programming since 2012, I first started by doing small CLI projects that was useful only for me (usually made with Batch or Visual Basic),
+                            then begun using python, to do more helpful applications. I've recently begun to learn web development, I just love it.
+                            </Box>
+                    </Typography>
                 </>
                 : <>
                     <h2>Je m'appelle Aurélien. Bienvenue !</h2>
                     <Typography paragraph className="skillsDescription">
-                        J'adore programmer depuis 2012, j'ai d'abbords commencé par faire des petits projets "CLI" à des fins personnels (fait en Batch ou Visual Basic),
-                        puis j'ai decouvert Python ce qui m'as permis de faire des projets personnels plus complexes. J'ai recemment debuté le devellopement web, j'adore ça!
-        </Typography>
+                        <Box fontFamily="Lato" m={1}>
+                            J'adore programmer depuis 2012, j'ai d'abbords commencé par faire des petits projets "CLI" à des fins personnels (fait en Batch ou Visual Basic),
+                            puis j'ai decouvert Python ce qui m'as permis de faire des projets personnels plus complexes. J'ai recemment debuté le devellopement web, j'adore ça!
+                        </Box>
+                    </Typography>
                 </>
             }
 
 
             {lang === "ENG"
-                ? <>
-                    <h2>My skills</h2>
-                    <h4>The langages I speak</h4>
-                </>
-                : <>
-                    <h2>Mes compétences</h2>
-                    <h4>Les langages dont je parle</h4>
-                </>
+                ? <h4>The langages I speak</h4>
+                : <h4>Les langages dont je parle</h4>
             }
             <div className="skillsCtnr">
                 {skillsData.map(skill => {
@@ -110,10 +117,13 @@ const Skills = () => {
                                     </Typography>
                                     <Divider />
                                     <Typography className={classes.typo}>
-                                        {lang === "ENG"
-                                            ? skill.textENG
-                                            : skill.textFR
-                                        }
+
+                                        <Box fontFamily="Lato" m={1}>
+                                            {lang === "ENG"
+                                                ? skill.textENG
+                                                : skill.textFR
+                                            }
+                                        </Box>
                                     </Typography>
                                 </Paper>
                             </Grow>
@@ -143,10 +153,43 @@ const Skills = () => {
                                     </Typography>
                                     <Divider />
                                     <Typography className={classes.typo}>
-                                        {lang === "ENG"
-                                            ? tech.textENG
-                                            : tech.textFR
-                                        }
+                                        <Box fontFamily="Lato" m={1}>
+                                            {lang === "ENG"
+                                                ? tech.textENG
+                                                : tech.textFR
+                                            }
+                                        </Box>
+                                    </Typography>
+                                </Paper>
+                            </Grow>
+                        </div>
+                    )
+                })}
+            </div>
+
+            {lang === "ENG"
+                ? <h4>Applications I am using</h4>
+                : <h4>Les applications que j'utilise</h4>
+            }
+            <div className="appCtnr">
+                {appData.map(app => {
+                    return (
+                        <div key={app.imgId} className={`icon ${app.iconClass}`} onClick={handleChange}>
+                            <img src={app.iconSrc} id={app.imgId} alt={`${app.imgAlt} icon`} width={iconsSize} height={iconsSize}></img>
+                            <span className="tooltiptext">{app.title}</span>
+                            <Grow in={state[app.iconClass]}>
+                                <Paper elevation={4} className={classes.paper}>
+                                    <Typography className={classes.typo}>
+                                        {app.title}
+                                    </Typography>
+                                    <Divider />
+                                    <Typography className={classes.typo}>
+                                        <Box fontFamily="Lato" m={1}>
+                                            {lang === "ENG"
+                                                ? app.textENG
+                                                : app.textFR
+                                            }
+                                        </Box>
                                     </Typography>
                                 </Paper>
                             </Grow>

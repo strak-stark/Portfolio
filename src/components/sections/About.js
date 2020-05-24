@@ -6,6 +6,7 @@ import githubIcon from '../../assets/githubIcon.svg'
 import Webgl from '../Webgl'
 import './styles/About.css'
 import { TradContext } from '../../contexts/TradContext';
+import { Box } from '@material-ui/core';
 
 const About = () => {
     let lang = React.useContext(TradContext);
@@ -18,15 +19,19 @@ const About = () => {
 
                         <h1>Front-end Developer</h1>
                         <Typography paragraph className="aboutDescription">
-                            I've been interested in programming since I was 13, I love what I do, especially bringing ideas to life.
-        </Typography>
+                            <Box fontFamily="Lato" m={1}>
+                                I've been interested in programming since I was 13, I love what I do, especially bringing ideas to life.
+                            </Box>
+                        </Typography>
                     </>
                     : <>
 
                         <h1>Developpeur Front-end</h1>
                         <Typography paragraph className="aboutDescription">
-                            Je m'intéresse à la programmation depuis que j'ai 13 ans, j'adore ce que je fais, surtout donner vie à mes idées.
-        </Typography>
+                            <Box fontFamily="Lato" m={1}>
+                                Je m'intéresse à la programmation depuis que j'ai 13 ans, j'adore ce que je fais, surtout donner vie à mes idées.
+                            </Box>
+                        </Typography>
                     </>
                 }
                 <div className="hero-body-center">

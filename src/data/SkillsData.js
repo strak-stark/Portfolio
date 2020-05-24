@@ -1,11 +1,12 @@
 import htmlIcon from '../assets/html5-brands.svg'
-
 import cssIcon from '../assets/css3-alt-brands.svg'
 import jsIcon from '../assets/js-brands.svg'
 import pythonIcon from '../assets/python-brands.svg'
 import reactIcon from '../assets/react-brands.svg'
 import webglIcon from '../assets/WebGL_Logo.svg'
 import firebaseIcon from '../assets/firebase-logo.png'
+import gitIcon from '../assets/Git_icon.svg'
+import vsCodeIcon from '../assets/vsCodeIcon.svg'
 export const skillsData = [
     {
         iconClass: 'htmlIcon',
@@ -73,5 +74,25 @@ export const techData = [
         title: 'Firebase',
         textENG: 'I did some projects with this tool, really powerful and useful!',
         textFR: "J'ai déjà fais quelques projets avec Firebase, c'est très puissant et utile!"
+    },
+]
+export const appData = [
+    {
+        iconClass: 'gitIcon',
+        imgId: 'gitShow',
+        imgAlt: 'Git',
+        iconSrc: gitIcon,
+        title: 'Git',
+        textENG: 'I just begun using this technology. Already falling in love for it!',
+        textFR: "J'ai recemment commencé a utiliser ReactJS. J'en suis déjà amoureux!"
+    },
+    {
+        iconClass: 'vsCodeIcon',
+        imgId: 'vsCodeShow',
+        imgAlt: 'Visual Studio Code',
+        iconSrc: vsCodeIcon,
+        title: 'VsCode',
+        textENG: 'I also just begun with it, I love the the way its working. I am also using ThreeJS with it!',
+        textFR: "J'ai aussi commencé recemment a utiliser WebGL, j'adore la manière dont il marche. J'utilise aussi ThreeJS avec..."
     },
 ]

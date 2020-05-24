@@ -8,7 +8,7 @@
 }
 
 .projects h2 {
-    padding-top: 70px;
+    padding-top: 30px;
 }
 
 .projectsCtnr {
@@ -16,15 +16,14 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: calc(100vh - 64px);
-    padding: 20px;
+    min-height: calc(100vh - 132px);
     overflow: hidden;
     flex-wrap: wrap;
 }
 
 .project {
     width: 450px;
-    height: 300px;
+    height: 250px;
     margin: 20px;
     position: relative;
     display: flex;
@@ -78,7 +77,7 @@
     background: #C6CA53;
 }
 
-.dataBtn{
+.dataBtn {
     width: 100px;
     padding: 5px;
     display: flex;
@@ -91,7 +90,8 @@
     text-decoration: none;
     font-size: 16px;
 }
-.dataBtn:hover{
+
+.dataBtn:hover {
     color: white;
     text-decoration: none;
 }

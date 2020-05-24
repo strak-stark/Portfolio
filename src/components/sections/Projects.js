@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles/Projects.css'
 import { TradContext } from '../../contexts/TradContext';
-import { Typography } from '@material-ui/core';
+import { Typography, Box } from '@material-ui/core';
 import githubIcon from "../../assets/githubIcon.svg"
 import { projectsData } from '../../data/ProjectsData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -31,16 +31,14 @@ const Projects = () => {
                             <div className="projectDataCtnr">
                                 <div className="projectData">
                                     <h4>{project.name}</h4>
-                                    {lang === "ENG"
-                                        ?
-                                        <Typography paragraph className="aboutDescription">
-                                            {project.descriptionENG}
+                                    <Typography paragraph className="aboutDescription">
+                                            <Box fontFamily="Lato" m={1}>
+                                                {lang === "ENG"
+                                                    ? project.description.ENG
+                                                    : project.description.FR
+                                                }
+                                            </Box>
                                         </Typography>
-                                        :
-                                        <Typography paragraph className="aboutDescription">
-                                            {project.descriptionFR}
-                                        </Typography>
-                                    }
                                     <div
                                         style={{
                                             display: "flex",
