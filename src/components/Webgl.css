@@ -6,7 +6,7 @@ canvas.webgl
     width: 400px !important;
     height: 400px !important;
     text-align: center;
-    background: rgb(99, 118, 131);
+    background: rgba(99, 118, 131, 0);
     color: #fff;
     cursor: pointer;
 }
@@ -14,7 +14,16 @@ canvas.webgl h2
 {
     padding-top: 70px;
 }
-
+.webglCtnr{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.webglCtnr p{
+    color: rgba(128, 128, 128, 0.726);
+}
 .square
 {
     border: red 1px solid;

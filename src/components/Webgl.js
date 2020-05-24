@@ -15,7 +15,6 @@ class Webgl extends Component {
         const gltfLoader = new GLTFLoader()
 
         const scene = new THREE.Scene()
-        scene.background = new THREE.Color(0xfafafa);
 
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.2)
         scene.add(ambientLight)
@@ -60,9 +59,9 @@ class Webgl extends Component {
         // )
         // scene.add(cube)
 
-        const renderer = new THREE.WebGLRenderer({ canvas: canvas })
+        const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true })
         renderer.setSize(canvasBounding.width, canvasBounding.height)
-
+        renderer.setClearColor(0x000000, 0); // the default
         // Resize
         window.addEventListener('resize', () => {
             const canvasBounding = canvas.getBoundingClientRect()
@@ -91,7 +90,11 @@ class Webgl extends Component {
     }
     render() {
         return (
-            <canvas className="webgl" onClick={this.handleClick}></canvas>
+            <div className="webglCtnr">
+                <canvas className="webgl" onClick={this.handleClick} title="Scene made by Wesai">
+                </canvas>
+                {/* <p>Scene made by <a href="https://sketchfab.com/Wesai" target="_blank" rel="noopener noreferrer">Wesai</a></p> */}
+            </div>
         )
     }
 }

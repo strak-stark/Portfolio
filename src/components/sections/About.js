@@ -3,8 +3,6 @@ import Typography from '@material-ui/core/Typography';
 import profilePic from '../../assets/avatar.jpg'
 import illustration from '../../assets/illustration.png'
 import githubIcon from '../../assets/githubIcon.svg'
-
-import LazyLoad from 'react-lazy-load';
 import Webgl from '../Webgl'
 import './styles/About.css'
 import { TradContext } from '../../contexts/TradContext';
@@ -45,10 +43,10 @@ const About = () => {
 
                 </div>
             </div>
-s
+
             <div className="hero-foot">
                 <div className="illustrationCtnr">
-                    <img className="illustration" src={illustration}></img>
+                    <img className="illustration" src={illustration} title="Designed by Freepik"></img>
                 </div>
             </div>
 
