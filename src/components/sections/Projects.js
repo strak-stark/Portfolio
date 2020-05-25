@@ -6,6 +6,8 @@ import githubIcon from "../../assets/githubIcon.svg"
 import { projectsData } from '../../data/ProjectsData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import Fade from 'react-reveal/Fade';
+
 
 const iconsSize = "90px"
 const Projects = () => {
@@ -20,18 +22,19 @@ const Projects = () => {
             }
 
             <div className="projectsCtnr">
-                {projectsData.map(project => {
-                    return (
-                        <article className={`project ${project.name}`} key={project.name}>
+                <Fade>
+                    {projectsData.map(project => {
+                        return (
+                            <article className={`project ${project.name}`} key={project.name}>
 
-                            {lang === "ENG"
-                                ? <span className={`badge ${project.type.type}`}>{project.type.ENG}</span>
-                                : <span className={`badge ${project.type.type}`}>{project.type.FR}</span>
-                            }
-                            <div className="projectDataCtnr">
-                                <div className="projectData">
-                                    <h4>{project.name}</h4>
-                                    <Typography paragraph className="aboutDescription">
+                                {lang === "ENG"
+                                    ? <span className={`badge ${project.type.type}`}>{project.type.ENG}</span>
+                                    : <span className={`badge ${project.type.type}`}>{project.type.FR}</span>
+                                }
+                                <div className="projectDataCtnr">
+                                    <div className="projectData">
+                                        <h4>{project.name}</h4>
+                                        <Typography paragraph className="aboutDescription">
                                             <Box fontFamily="Lato" m={1}>
                                                 {lang === "ENG"
                                                     ? project.description.ENG
@@ -39,45 +42,46 @@ const Projects = () => {
                                                 }
                                             </Box>
                                         </Typography>
-                                    <div
-                                        style={{
-                                            display: "flex",
-                                            alignItems: "center",
-                                            justifyContent: project.live ? "space-between" : "center",
-                                            width: "250px"
-                                        }}>
-                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="dataBtn">
-                                            <div style={{
-                                                width: "75px",
+                                        <div
+                                            style={{
                                                 display: "flex",
                                                 alignItems: "center",
-                                                justifyContent: "space-between"
+                                                justifyContent: project.live ? "space-between" : "center",
+                                                width: "250px"
                                             }}>
-                                                Github
-                                        <img src={githubIcon} alt="Github Icon" width="22px" height="22px" />
-                                            </div>
-                                        </a>
-                                        {project.live
-                                            ? <button className="dataBtn">
+                                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="dataBtn">
                                                 <div style={{
                                                     width: "75px",
                                                     display: "flex",
                                                     alignItems: "center",
                                                     justifyContent: "space-between"
                                                 }}>
-                                                    {lang === "ENG" ? "Go live" : "Tester"}
-
-                                                    <FontAwesomeIcon icon={faPlay} />
+                                                    Github
+                                        <img src={githubIcon} alt="Github Icon" width="22px" height="22px" />
                                                 </div>
-                                            </button>
-                                            : null}
+                                            </a>
+                                            {project.live.toggle
+                                                ? <a href={project.live.link} target="_blank" rel="noopener noreferrer" className="dataBtn">
+                                                    <div style={{
+                                                        width: "75px",
+                                                        display: "flex",
+                                                        alignItems: "center",
+                                                        justifyContent: "space-between"
+                                                    }}>
+                                                        {lang === "ENG" ? "Go live" : "Tester"}
 
+                                                        <FontAwesomeIcon icon={faPlay} />
+                                                    </div>
+                                                </a>
+                                                : null}
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </article>
-                    )
-                })}
+                            </article>
+                        )
+                    })}
+                </Fade>
             </div>
         </section >
     )
