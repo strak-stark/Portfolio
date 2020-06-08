@@ -46,7 +46,7 @@ const Projects = () => {
                                             style={{
                                                 display: "flex",
                                                 alignItems: "center",
-                                                justifyContent: project.live ? "space-between" : "center",
+                                                justifyContent: project.live.toggle ? "space-between" : "center",
                                                 width: "250px"
                                             }}>
                                             <a href={project.github} target="_blank" rel="noopener noreferrer" className="dataBtn">

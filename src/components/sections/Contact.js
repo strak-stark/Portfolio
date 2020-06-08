@@ -12,11 +12,10 @@ const Contact = () => {
         <section className="contact">
             <div className="contactData">
                 {lang === "ENG"
-                    ? <h2>Reach me on social medias...</h2>
+                    ? <h2>Find me on social medias...</h2>
                     : <h2>Retrouvez moi sur les résaux sociaux...</h2>
                 }
                 <div className="contactIcons">
-
                     <a href="https://twitter.com/AurelienNezzar" target="_blank" rel="noopener noreferrer">
                         <img src={twitterIcon} alt="Twitter Icon" width={iconSize} height={iconSize}></img>
                     </a>

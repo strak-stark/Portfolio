@@ -19,7 +19,7 @@ import FaceIcon from '@material-ui/icons/Face'; // About
 import SettingsIcon from '@material-ui/icons/Settings'; // Skills
 import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';  // Projects
 // Contact (mailicon)
-import GetAppIcon from '@material-ui/icons/GetApp';// DL resume
+import OpenInBrowserIcon from '@material-ui/icons/OpenInBrowser'; // DL resume
 import Switch from '@material-ui/core/Switch';
 import { Link, animateScroll as scroll } from "react-scroll";
 import Grid from '@material-ui/core/Grid';
@@ -106,9 +106,9 @@ function App(props) {
                             </ListItem>
                         </Link>
                     ))}
-                <ListItem button key="Download resume">
-                    <ListItemIcon><GetAppIcon /></ListItemIcon>
-                    <ListItemText primary={actualLang === "ENG" ? 'Download resume' : 'Télécharger CV'} />
+                <ListItem button key="Open resume">
+                    <ListItemIcon><OpenInBrowserIcon /></ListItemIcon>
+                    <ListItemText primary={actualLang === "ENG" ? 'Open resume' : 'Voir CV'} />
                 </ListItem>
 
                 <ListItem key="SwitchLang">

@@ -25,14 +25,14 @@ class Webgl extends Component {
         directionalLight.position.z = 5
         scene.add(directionalLight)
 
-        const room = new THREE.Group()
-        // room.scale.set(0.001, 0.001, 0.001)
+        const cube = new THREE.Group()
+        cube.scale.set(0.5, 0.5, 0.5)
         gltfLoader.load(
-            'models/room/scene.gltf',
+            'models/cube/cube.gltf',
             (gltf) => {
                 while (gltf.scene.children.length) {
                     const child = gltf.scene.children[0]
-                    room.add(child)
+                    cube.add(child)
                 }
             },
             (progress) => {
@@ -44,12 +44,12 @@ class Webgl extends Component {
                 console.log(error)
             }
         )
-        scene.add(room)
+        scene.add(cube)
         const camera = new THREE.PerspectiveCamera(75, canvasBounding.width / canvasBounding.height, 0.01, 100)
-        camera.position.z = 7
-        camera.position.x = 5
+        camera.position.z = 1
+        camera.position.x = 1
 
-        camera.position.y = 8
+        camera.position.y = 1
         scene.add(camera)
         camera.lookAt(new THREE.Vector3(0, 0, 0))
 
@@ -74,7 +74,8 @@ class Webgl extends Component {
 
         // Animation
         const tick = () => {
-            room.rotation.y += 0.005
+            cube.rotation.y += 0.005
+            cube.rotation.x += 0.005
 
             renderer.render(scene, camera)
 
@@ -91,9 +92,8 @@ class Webgl extends Component {
     render() {
         return (
             <div className="webglCtnr">
-                <canvas className="webgl" onClick={this.handleClick} title="Scene made by Wesai">
+                <canvas className="webgl" onClick={this.handleClick}>
                 </canvas>
-                {/* <p>Scene made by <a href="https://sketchfab.com/Wesai" target="_blank" rel="noopener noreferrer">Wesai</a></p> */}
             </div>
         )
     }

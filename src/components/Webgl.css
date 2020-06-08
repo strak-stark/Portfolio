@@ -3,8 +3,8 @@ canvas.webgl
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px !important;
-    height: 400px !important;
+    width: 200px !important;
+    height: 200px !important;
     text-align: center;
     background: rgba(99, 118, 131, 0);
     color: #fff;
@@ -15,6 +15,8 @@ canvas.webgl h2
     padding-top: 70px;
 }
 .webglCtnr{
+    width: 180px;
+    height: 180px;
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;

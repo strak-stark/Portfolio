@@ -14,7 +14,7 @@ export const skillsData = [
         imgAlt: 'HTML5',
         iconSrc: htmlIcon,
         title: 'HTML 5',
-        textENG: 'Its been nearly a year that I started coding with HTML 5',
+        textENG: "It's been nearly a year that I started coding with HTML 5",
         textFR: 'Cela fait presque 1 an que je code avec HTML'
 
     },
@@ -24,7 +24,7 @@ export const skillsData = [
         imgAlt: 'CSS3',
         iconSrc: cssIcon,
         title: 'CSS 3',
-        textENG: 'Its been nearly a year that I started coding with CSS 3',
+        textENG: "It's been nearly a year that I started coding with CSS 3",
         textFR: 'Cela fait presque 1 an que je code avec CSS'
 
     },
@@ -34,7 +34,7 @@ export const skillsData = [
         imgAlt: 'JavaScript',
         iconSrc: jsIcon,
         title: 'JavaScript',
-        textENG: 'Its been nearly a year that I started coding with JavaScript',
+        textENG: "It's been nearly a year that I started coding with JavaScript",
         textFR: 'Cela fait presque 1 an que je code avec JavaScript'
     },
     {
@@ -43,7 +43,7 @@ export const skillsData = [
         imgAlt: 'Python',
         iconSrc: pythonIcon,
         title: 'Python',
-        textENG: `I've begun started coding with python since 2015. I really like it !`,
+        textENG: `I've began started coding with python since 2015. I really like it !`,
         textFR: "J'ai commencé à utiliser Python depuis 2015. J'adore ce language !"
     },
 ]
@@ -54,8 +54,8 @@ export const techData = [
         imgAlt: 'ReactJS',
         iconSrc: reactIcon,
         title: 'ReactJS',
-        textENG: 'I just begun using this technology. Already falling in love for it!',
-        textFR: "J'ai recemment commencé a utiliser ReactJS. J'en suis déjà amoureux!"
+        textENG: 'I just began using this technology. I love how it work!',
+        textFR: "J'ai recemment commencé a utiliser ReactJS. J'adore son principe de fonctionnement!"
     },
     {
         iconClass: 'webglIcon',
@@ -63,8 +63,8 @@ export const techData = [
         imgAlt: 'WebGL',
         iconSrc: webglIcon,
         title: 'WebGL',
-        textENG: 'I also just begun with it, I love the the way its working. I am also using ThreeJS with it!',
-        textFR: "J'ai aussi commencé recemment a utiliser WebGL, j'adore la manière dont il marche. J'utilise aussi ThreeJS avec..."
+        textENG: "I also just began with it, I love the the way it's working. I am also using ThreeJS with it!",
+        textFR: "Recemment j'ai aussi commencé a utiliser WebGL, j'adore la manière dont il marche. J'utilise aussi ThreeJS avec..."
     },
     {
         iconClass: 'firebaseIcon',
@@ -83,8 +83,8 @@ export const appData = [
         imgAlt: 'Git',
         iconSrc: gitIcon,
         title: 'Git',
-        textENG: 'I just begun using this technology. Already falling in love for it!',
-        textFR: "J'ai recemment commencé a utiliser ReactJS. J'en suis déjà amoureux!"
+        textENG: 'This year, I began using git. I just realize how important it is !',
+        textFR: "Cette année j'ai commencé à utiliser git. Je comprend maintenant à quelle point c'est important !"
     },
     {
         iconClass: 'vsCodeIcon',
@@ -92,7 +92,7 @@ export const appData = [
         imgAlt: 'Visual Studio Code',
         iconSrc: vsCodeIcon,
         title: 'VsCode',
-        textENG: 'I also just begun with it, I love the the way its working. I am also using ThreeJS with it!',
-        textFR: "J'ai aussi commencé recemment a utiliser WebGL, j'adore la manière dont il marche. J'utilise aussi ThreeJS avec..."
+        textENG: 'I am working with Visual Code Studio IDE',
+        textFR: "Je travaille avec l'IDE Visual Code Studio "
     },
 ]

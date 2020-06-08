@@ -1,6 +1,6 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography';
-import profilePic from '../../assets/avatar.jpg'
+import profilePic from '../../assets/avatar.png'
 import illustration from '../../assets/illustration.png'
 import githubIcon from '../../assets/githubIcon.svg'
 import Webgl from '../Webgl'

@@ -7,7 +7,6 @@
     position: relative;
 }
 .hero h1{
-    padding-top: 70px;
     padding-bottom: 25px;
     font-size: 50px;
 }
@@ -17,10 +16,11 @@
     position: relative;
 }
 .hero-body-center{
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     
 }
 .profilePicCtnr{
@@ -59,7 +59,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 200px;
+    padding-bottom: 280px;
     width: 650px;
 }
 .hero-foot{
