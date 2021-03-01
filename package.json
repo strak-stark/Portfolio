@@ -52,6 +52,6 @@
     "firebase-tools": "^8.4.0",
     "isomorphic-fetch": "^2.2.1",
     "react-reveal": "^1.2.2",
-    "three": "^0.116.1"
+    "three": "^0.125.0"
   }
 }
